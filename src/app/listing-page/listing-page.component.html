@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+      <div class="col-2 bg-randomfill">ok</div>
+      <div class="col-2">ok</div>
+      <div class="col-2">ok</div>
+      <div class="col-2">
+                <div class="dropdown">
+                  <button class="dropbtn">Sort By</button>
+                    <div class="dropdown-content">
+                      <a (click)="Sort('name')" >Name</a>
+                      <a (click)="Sort('date')" >Joining Date</a>
+                      <a (click)="Sort('rating')" >Rating</a>
+                    </div>  
+              </div>
+      </div>
+      <div class="col-2">ok</div>
+      <div class="col-2">ok</div>
+      
+  </div>
+</div>
+
+
+
+ 
+
+
+
+<div class="container">
+  <h2></h2>
+            
+  <table class="table table-bordered table-hover table-responsive-sm">
+    <thead>
+      <tr>
+        <th *ngFor = "let column of headers">
+      {{column}}
+    </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let row of rows" >
+    <td *ngFor = "let column of headers">
+      <button (click)="View(row['Email ID'])" style="border:0px solid black; background-color: transparent;">{{row[column]}}</button>
+      
+    </td>
+  </tr>
+      
+    </tbody>
+  </table>
+  <router-outlet></router-outlet> 
+</div>
+
+</body>
+</html>
