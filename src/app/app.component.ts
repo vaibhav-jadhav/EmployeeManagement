@@ -41,7 +41,8 @@ export class AppComponent
   }
   
   ngOnDestroy() {
-     this.isButtonVisible = false;       
+     this.isButtonVisible = false;
+            
 }
  
    
@@ -55,5 +56,31 @@ export class AppComponent
   {
     localStorage.setItem('status', 'logout');
     this.router.navigate(['/login']);
+  }   
+  clickFunction1()
+  {
+    alert("menu");
+  
+    if(localStorage.getItem('status')=="logout")
+    {
+      this.router.navigate(['/login']);
+    }
+    if(localStorage.getItem('status')=="login")
+    {
+        this.router.navigate(['/listing-page']);
+    }
+
   }
+  
+  ngDoCheck(){
+    if(localStorage.getItem('status')=="logout")
+    {
+      this.status="login";
+    }
+    if(localStorage.getItem('status')=="login")
+    {
+      this.status="logout";
+    }
+  }
+  
 }

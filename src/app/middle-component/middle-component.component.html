@@ -1,18 +1,13 @@
 <html>
 <body>
-
-    <div class="login-dark" *ngIf="this.isButtonVisible">
-    
+    <div class="login-dark" style="border-radius:30px;" *ngIf="this.isButtonVisible">
         <form>
-            <h2 class="sr-only">Login Form</h2>
+            <h2 class="sr-only" >Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" [(ngModel)]="Email" type="email" name="email" placeholder="Email"></div>
-            <div class="form-group"><input class="form-control" [(ngModel)]="Password" type="password" name="password" placeholder="Password"></div>
-            <div class="form-group"><button  class="btn btn-primary btn-block" (click)="clickFunction($email,$password)" [routerLink]="['listing-page']">Click Me</button></div>
-           <button class="nav-item nav-link-edit" [routerLink]="['./listing-page']">Home</button >
+            <div  class="form-group" style="box-shadow: 9px 8px 6px 2px #ded2ad; border-radius:19px;"><input class="form-control" [(ngModel)]="Email" type="email" name="email" placeholder="Email"></div>
+            <div class="form-group" style="box-shadow: 9px 8px 6px 2px #ded2ad; border-radius:19px;"><input class="form-control" [(ngModel)]="Password" type="password" name="password" placeholder="Password"></div>
+            <div class="form-group" style="background-color:#65caeb;box-shadow: 9px 8px 6px 2px #ded2ad"><button  class="btn btn-primary btn-block" (click)="clickFunction($email,$password)" [routerLink]="['listing-page']">Login</button></div>
             </form>
     </div>
-
    </body>
-  
 </html>

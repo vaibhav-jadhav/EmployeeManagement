@@ -96,3 +96,50 @@
     background-color: #4CAF50;
     color: white;
   }
+  .myButton {
+    box-shadow: 22px 6px 19px 0px #1c1b18;
+    background:linear-gradient(to bottom, #faf6eb 5%, #ccc2a6 100%);
+    background-color:#faf6eb;
+    border-radius:13px;
+    display:inline-block;
+    cursor:pointer;
+    color:#505739;
+    font-family:Arial;
+    font-size:18px;
+    font-weight:bold;
+    padding:12px 16px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #ffffff;
+  }
+  .myButton:hover {
+    background:linear-gradient(to bottom, #ccc2a6 5%, #faf6eb 100%);
+    background-color:#ccc2a6;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+
+
+
+
+  nav {
+    padding: 20px 15px;
+  }
+  .nav-menu {
+    margin-top: 40px;
+    display: none;
+    float: none;
+    width: 100%;
+  }
+  .nav-menu li {
+    float: none;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #f7f7f7;
+    line-height: 45px;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
